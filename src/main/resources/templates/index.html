@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OAuth 2 Login demo</title>        
+    </head>
+    <body>
+        <div th:if="${principal}">
+            <p th:text="${principal.getName()}">Current User</p>
+        </div>        
+        <div th:unless="${principal}">
+            <p><a href="#" th:href="@{/protected}">Login</a></p>
+        </div>                
+    </body>
+</html>
