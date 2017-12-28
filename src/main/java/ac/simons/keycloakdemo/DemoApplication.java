@@ -48,9 +48,7 @@ import static org.springframework.security.oauth2.client.web.OAuth2Authorization
 /**
  * Spring Boot Security 2 backs off anyway if there's at least one bean of type
  * WebSecurityConfigurerAdapter, but it still generates an in-memory user and I
- * don't want this and therefor I'm excluding the whole auto config
- *
- * @author Michael J. Simons, 2017-12-28
+ * don't want this and therefor I'm excluding the whole auto config.
  */
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class DemoApplication {
