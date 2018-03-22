@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo2" />
+        <module name="keycloakdemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo2" target="1.9" />
+      <module name="keycloakdemo" target="1.9" />
     </bytecodeTargetLevel>
   </component>
 </project>
