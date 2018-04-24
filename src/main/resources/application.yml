@@ -10,7 +10,8 @@ spring:
     oauth2:
       client:
         registration:
-          test: # This is the id used inside the redirect-uri-template, must be the same as your realm
+          # This 'Demo:' is the id used inside the redirect-uri-template and must be the same as your realm
+          test: 
             client-id: test-app
             client-secret: a0fe1b28-02f1-4751-a4eb-a72f78882a47
             client-name: some client
