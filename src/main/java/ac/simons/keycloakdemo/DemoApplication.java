@@ -54,7 +54,7 @@ class SecurityConfig {
      */
     @Bean
     public WebSecurityConfigurerAdapter webSecurityConfigurer(
-        @Value("${keycloak-client.realm}") final String realm
+        @Value("${keycloak-client.registration-id}") final String registrationId
     ) {
         return new WebSecurityConfigurerAdapter() {
             @Override
@@ -76,7 +76,7 @@ class SecurityConfig {
                         // I don't want a page with different clients as login options
                         // So i use the constant from OAuth2AuthorizationRequestRedirectFilter
                         // plus the configured realm as immediate redirect to Keycloak
-                        .loginPage(DEFAULT_AUTHORIZATION_REQUEST_BASE_URI + "/" + realm);
+                        .loginPage(DEFAULT_AUTHORIZATION_REQUEST_BASE_URI + "/" + registrationId);
             }
         };
     }

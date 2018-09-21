@@ -4,6 +4,7 @@ server:
 keycloak-client:
   server-url: http://localhost:8080/auth
   realm: test
+  registration-id: my-keycloak
 
 spring:
   security:
@@ -11,7 +12,7 @@ spring:
       client:
         registration:
           # This 'Demo:' is the id used inside the redirect-uri-template and must be the same as your realm
-          test: 
+          my-keycloak:
             client-id: test-app
             client-secret: a0fe1b28-02f1-4751-a4eb-a72f78882a47
             client-name: some client
